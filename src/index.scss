@@ -1,3 +1,5 @@
+@import "styles/main";
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +12,49 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:active, :hover, :focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size:  62.5%;
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: var(--color-primary-body);
+}
+
+body {
+  font-size: $font-size-medium;
+  background-color: var(--color-body);
+
+}
+
+.img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
 }

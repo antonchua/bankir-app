@@ -1,10 +1,21 @@
-import './App.scss';
+import {Routes, Route, BrowserRouter} from "react-router-dom";
+
+import classes from './App.module.scss';
+import Home from "./pages/Home";
+import Authentication from "./pages/Authentication";
+
 
 function App() {
   return (
-    <div className="App">
-      <h1>App component</h1>
-    </div>
+      <BrowserRouter>
+        <div className={classes.app}>
+          <Routes>
+            <Route path={"/"} element={<Home/>}/>
+            <Route path={"/authentication"} element={<Authentication/>}/>
+          </Routes>
+        </div>
+      </BrowserRouter>
+
   );
 }
 
